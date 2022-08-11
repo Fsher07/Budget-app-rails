@@ -1,0 +1,33 @@
+<nav class="main-nav navbar navbar-expand-lg navbar-light p-3 mb-3 d-flex justify-content-between align-items-center">
+  <div>
+   <%= link_to 'javascript:history.back()', class:'text-white' do %>
+   <%= heroicon "arrow-left", options: { class: "nav-i text-white" }  %>
+   <%end%>
+  </div>
+
+  <%if defined?(title) %>
+   <h2 class="text-white"><%= title %></h2>
+  <%else%>
+    <h2 class="text-white"><%= request.path.delete('\/').squeeze(' ').upcase %></h2>
+  <%end%>
+  
+    <div class="menu-bar">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div class="mobile-menu text-white">
+     
+      <%if user_signed_in? %>
+        <%= link_to 'Categories', categories_path %>
+        <%= link_to 'Payments', operations_path %>
+        <%= link_to 'Log out', destroy_user_session_path, data: { "turbo-method": :delete }, class: 'nav-link' %></li>
+      <%else%>
+        <%= link_to 'Log in', new_user_session_path, method: :get, class: 'nav-link' %></li>
+        <%= link_to 'Sign up', new_user_registration_path, method: :get, class: 'nav-link'  %>
+      <%end%>
+
+    </div>
+  </div>
+</nav>
+
