@@ -5,6 +5,8 @@ ruby '3.1.2'
 
 gem 'devise'
 
+gem 'heroicon'
+
 gem 'cancancan', '~> 3.4'
 
 gem 'rubocop'
