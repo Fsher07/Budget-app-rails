@@ -10,13 +10,13 @@
   <%else%>
     <h2 class="text-white"><%= request.path.delete('\/').squeeze(' ').upcase %></h2>
   <%end%>
-  
-    <div class="menu-bar">
+  <div data-controller="hello" >
+    <div class="menu-bar" data-hello-target="menuBar" data-action="click->hello#layout" >
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
     </div>
-    <div class="mobile-menu text-white">
+    <div data-hello-target="mobileMenu"  data-action="click->hello#layout" class="mobile-menu text-white">
      
       <%if user_signed_in? %>
         <%= link_to 'Categories', categories_path %>
