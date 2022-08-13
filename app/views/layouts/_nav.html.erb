@@ -1,4 +1,4 @@
-<nav class="main-nav navbar navbar-expand-lg navbar-light p-3 mb-3 d-flex justify-content-between align-items-center">
+<nav class="main-nav navbar navbar-expand-lg navbar-light mb-3 d-flex justify-content-between align-items-center">
   <div>
    <%= link_to 'javascript:history.back()', class:'text-white' do %>
    <%= heroicon "arrow-left", options: { class: "nav-i text-white" }  %>
@@ -6,9 +6,9 @@
   </div>
 
   <%if defined?(title) %>
-   <h2 class="text-white"><%= title %></h2>
+   <h2 class="text-white mb-0"><%= title %></h2>
   <%else%>
-    <h2 class="text-white"><%= request.path.delete('\/').squeeze(' ').upcase %></h2>
+    <h2 style="font-size: 24px;" class="text-white mb-0"><%= request.path.delete('\/').upcase %></h2>
   <%end%>
   <div data-controller="hello" >
     <div class="menu-bar" data-hello-target="menuBar" data-action="click->hello#layout" >

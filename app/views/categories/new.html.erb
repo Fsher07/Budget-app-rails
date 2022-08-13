@@ -1,0 +1,18 @@
+<div class="container">
+
+  <%= form_with model: @category, url: categories_path, method: :post, local: true, class:"form" do |form| %>
+    
+    <div class="mb-3">
+      <%= form.label :name, class:"form-label" %>
+      <%= form.text_field :name, class:"form-control", placeholder: "Category name" %>
+    </div>
+
+    
+    <div class="mb-3">
+      <%= form.label :icon, class:"form-label" %>
+      <%= form.url_field :icon, class:"form-control", placeholder: "Icon link" %>
+    </div>
+
+    <%= form.submit :Complete, class:"btn btn-primary" %>
+  <%end%>
+</div>

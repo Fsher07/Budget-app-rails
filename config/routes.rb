@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     root to: "splashs#index", as: :unauthenticated_root
   end
 
-  root 'home#index'
+  root 'categories#index'
   resources :categories
   resources :operations
 end

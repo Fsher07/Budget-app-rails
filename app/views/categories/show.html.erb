@@ -1,0 +1,12 @@
+<div class="container card rounded mt-5">
+  <div class="container p-4 d-flex justify-content-between">
+		<h5 class="fw-bold">Total Amount:</h5>
+    <div class="d-flex amount-details">
+		<p class="fw-bold">$<%= @total %></p>
+  </div>
+</div>
+<div class="divider mb-2"></div>
+</div>
+ <%= render 'operations/index', locals: { operations: @operations } %>
+
+<%= button_to 'New Payment', new_operation_path, method: :get, class: "fixed-bottom btn btn-success rounded-0" %>

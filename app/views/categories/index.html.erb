@@ -1,17 +1,13 @@
-<div class="container">
+<div class="categories container">
   <% @categories.each_with_index do |category, index| %>
-    <div class="card mt-4 p-4">
-      <%= link_to category_path(category.id), class:"text-dark text-decoration-none"  do %>
+    <div class="card mt-4 p-3">
+   
+      <%= link_to category_path(category.id), class:"text-dark text-decoration-none d-flex gap-3"  do %>
         <%= render partial: "category" , locals: { category: category, index: index } %>
       <% end %> 
-      <% if can? :destroy, category%>
-        <%= button_to "REMOVE", category_path(category.id), method: :delete, class: "btn btn-secondary" %>
-      <% end %>
     </div>
   <% end %>
 </div>
 
+<%= button_to 'New Category', new_category_path, method: :get, class: "fixed-bottom btn btn-success rounded-0" %>
 
-<div class="text-center">
-  <%= button_to 'New Category', new_category_path, method: :get %>
-</div>

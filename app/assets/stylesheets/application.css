@@ -14,12 +14,29 @@
  *= require_self
  */
 
+ /*-- Font Family*/
+ @font-face {
+  font-family: 'Proxima Nova';
+  src: url('Proxima_Nova_Font.otf');
+}
+
+@font-face {
+  font-family: 'Huruf Miranti';
+  src: url('huruf_miranti_bold.ttf');
+}
+
+* {
+  font-family: 'Proxima Nova', sans-serif;
+}
+/*End of font familiy*/
+
  .main-nav {
-  background: linear-gradient(rgba(55, 172, 193), rgba(55, 120, 194));
+  padding: 2.2em 1em;
+  background: linear-gradient(rgba(55, 150, 193) 1%, rgba(55, 120, 194) 100%);
  }
 
  .nav-i {
-  width: 40px;
+  width: 30px;
 }
 
 .nav1 {
@@ -41,24 +58,28 @@
 }
 
 /* ------------------------------------------------- */
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: azure;
   margin: 0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+  color: #434b54;
+}
+
 h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 2px;
   font-size: 48px;
 }
 
 p {
-  font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
   font-size: 14px;
-  color: #333;
+  color: #a09e9e;
 }
 
 .header {
@@ -176,6 +197,7 @@ p {
 
   .menu-bar-fix {
     position: relative;
+    z-index: 1032;
   }
 
   .mobile-menu {
@@ -207,6 +229,7 @@ p {
     right: 0;
     bottom: 0;
     animation: slideMe 0.2s ease-in;
+    z-index: 1031;
   }
   
   @keyframes slideMe {
@@ -220,8 +243,8 @@ p {
   }
 
   .menu-bar div {
-    width: 35px;
-    height: 5px;
+    width: 30px;
+    height: 3px;
     background-color: #fafafa;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.13, 0.24, 0.35, 1.64);
@@ -243,5 +266,33 @@ p {
   
   .menu-bar.change .bar3 {
     transform: translate(0, -10px) rotate(-45deg);
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .categories.container {
+    background-color: azure;
+  }
+
+  .transaction-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 1vh;
+    margin-top: 3vh;
+    background-color: #fafafa;
+  }
+
+  .operation-details {
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .operation-details button {
+    background: none;
+    border: none;
+    padding: 0;
   }
 }

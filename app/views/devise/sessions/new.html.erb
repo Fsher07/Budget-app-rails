@@ -1,15 +1,12 @@
 <%= render 'layouts/nav', title: 'Log in' %>
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for resource, as: resource_name, url: session_path(resource_name), html: {class:"text-center d-flex flex-column gap-3"} do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"p-2" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class:"p-2", placeholder:"Password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -20,8 +17,10 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class:"btn btn-primary" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="text-center mt-5">
+  <%= render "devise/shared/links" %>
+</div>
