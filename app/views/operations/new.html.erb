@@ -1,0 +1,24 @@
+<div class="container">
+
+  <%= form_with model: @operation, method: :post, local: true, class:"form" do |form| %>
+    
+    <div class="mb-3">
+      <%= form.label :name, class:"form-label" %>
+      <%= form.text_field :name, class:"form-control", placeholder: "Payment name" %>
+    </div>
+
+    
+    <div class="mb-3">
+      <%= form.label :amount, class:"form-label" %>
+      <%= form.number_field :amount, class:"form-control", placeholder: "Amount" %>
+    </div>
+
+    
+    <div class="mb-3">
+      <%= form.label :category, class:"form-label" %>
+      <%= form.select :category_id, @categories, {}, class:"form-control" %>
+    </div>
+
+    <%= form.submit :Complete, class:"btn btn-primary" %>
+  <%end%>
+</div>

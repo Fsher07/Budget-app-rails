@@ -1,0 +1,10 @@
+<img src="<%= category.icon %>" alt="icon">
+<div>
+  <p style="font-weight: 300; font-size: 20px;"><%= category.name %></p>
+  <p class="mb-0 mt-5" style="font-weight: 300; font-size: 12px;"><%= category.created_at.strftime("%d-%b-%Y") %></p>
+</div>
+
+<h4>$<%= @total = Operation.where(category_id: category.id).sum(:amount) %></h4>
+
+
+
