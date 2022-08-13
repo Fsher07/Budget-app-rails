@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @categories = Category.includes(:user).all
+    @categories = current_user.categories.order(created_at: :desc)
     @operations = Operation.includes(:category).where(user_id: current_user.id)
   end
 
@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @operations = Operation.where(category_id: @category.id)
+    @operations = Operation.where(category_id: @category.id).order(created_at: :desc)
     @total = @operations.sum(:amount)
   end
 

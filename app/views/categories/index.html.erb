@@ -2,7 +2,7 @@
   <% @categories.each_with_index do |category, index| %>
     <div class="card mt-4 p-3">
    
-      <%= link_to category_path(category.id), class:"text-dark text-decoration-none d-flex gap-3"  do %>
+      <%= link_to category_path(category.id), class:"text-dark text-decoration-none d-flex justify-content-between"  do %>
         <%= render partial: "category" , locals: { category: category, index: index } %>
       <% end %> 
     </div>
