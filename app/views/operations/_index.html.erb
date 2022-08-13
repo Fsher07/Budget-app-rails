@@ -1,0 +1,15 @@
+<div class="payment-container container">
+  <% @operations.each do |operation| %>
+  <div class="container transaction-card">
+  <div class="mt-4 p-2">
+    <div class="d-flex justify-content-between">
+      <h5><%= operation.name %></h5>
+      <div class="d-flex operation-details">
+        <small>$<%= operation.amount.round(2) %></small>
+      </div>
+    </div>
+    <small><%= operation.created_at.strftime("%d %b %Y") %></small>
+  </div>
+</div>
+  <% end %>
+</div>

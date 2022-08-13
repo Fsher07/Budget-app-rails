@@ -13,3 +13,314 @@
  *= require_tree .
  *= require_self
  */
+
+/* -- Font Family */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('Proxima_Nova_Font.otf');
+}
+
+@font-face {
+  font-family: 'Huruf Miranti';
+  src: url('huruf_miranti_bold.ttf');
+}
+
+* {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* End of font familiy */
+
+.main-nav {
+  padding: 2.2em 1em;
+  background: linear-gradient(rgba(55, 150, 193) 1%, rgba(55, 120, 194) 100%);
+}
+
+.nav-i {
+  width: 30px;
+}
+
+.nav1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.login-form {
+  margin-top: 40px;
+}
+
+.btn-bg {
+  background-color: #5fb523;
+}
+
+.btn-border1 {
+  border: solid 1px white;
+}
+
+/* ------------------------------------------------- */
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: azure;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+  color: #434b54;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #a09e9e;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(rgba(55, 120, 194), rgba(55, 172, 193));
+  color: white;
+  margin-top: -69px;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /* Flexbox for containers */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /* Fix for safari gap */
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+.ad-tran {
+  border: solid 1px #f1f2f1;
+  width: 90%;
+  padding-top: 10px;
+  color: white;
+}
+
+.transaction-m {
+  margin-top: 100px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)     infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Shrinking for mobile */
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .menu-bar {
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .menu-bar-fix {
+    position: relative;
+    z-index: 1032;
+  }
+
+  .mobile-menu {
+    display: none;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .mobile-menu a {
+    font-size: 2em;
+    font-weight: 600;
+    color: #fafafa;
+    opacity: 1;
+    text-decoration: none;
+    border-bottom: solid 1px #fafafa;
+    padding-bottom: 10px;
+    margin: 0 20%;
+  }
+
+  .show {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(60deg, rgba(55, 172, 193), rgba(55, 120, 194));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: slideMe 0.2s ease-in;
+    z-index: 1031;
+  }
+
+  @keyframes slideMe {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .menu-bar div {
+    width: 30px;
+    height: 3px;
+    background-color: #fafafa;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.13, 0.24, 0.35, 1.64);
+  }
+
+  .menu-bar .bar1,
+  .menu-bar .bar2 {
+    margin-bottom: 5px;
+  }
+
+  .menu-bar.change .bar1 {
+    transform: translate(0, 10px) rotate(45deg);
+  }
+
+  .menu-bar.change .bar2 {
+    transform: translateX(-55px);
+    background-color: transparent;
+  }
+
+  .menu-bar.change .bar3 {
+    transform: translate(0, -10px) rotate(-45deg);
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .categories.container {
+    background-color: azure;
+  }
+
+  .transaction-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 1vh;
+    margin-top: 3vh;
+    background-color: #fafafa;
+  }
+
+  .operation-details {
+    align-items: center;
+    gap: 2px;
+  }
+
+  .operation-details button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .new-payment {
+    background-color: #5fb743;
+    padding: 0.75rem;
+  }
+
+  .new-button {
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .payment-container {
+    margin-bottom: 5rem;
+  }
+}

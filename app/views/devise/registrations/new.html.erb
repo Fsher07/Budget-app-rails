@@ -1,0 +1,27 @@
+<%= render 'layouts/nav', title: 'Sign up' %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { data: { turbo: false} }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+ <div class="container signup mt-3">
+    <div class="field m-1">
+      <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+    </div>
+
+    <div class="field m-1">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+    </div>
+
+    <div class="field m-1">
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
+    </div>
+
+    <div class="field m-1">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm Password" %>
+    </div>
+
+     <div class="text-center actions">
+      <%= f.submit "Sign up", class:"btn btn-primary mt-3" %>
+    </div>
+  </div>
+<% end %>
