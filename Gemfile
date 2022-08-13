@@ -13,7 +13,7 @@ gem 'rubocop'
 
 gem 'turbolinks'
 
-gem 'stimulus-rails'
+gem 'rspec-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
@@ -81,4 +81,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'database_cleaner-active_record'
 end

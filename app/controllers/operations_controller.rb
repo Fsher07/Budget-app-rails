@@ -1,6 +1,6 @@
 class OperationsController < ApplicationController
   load_and_authorize_resource
-  before_action :set_operation, only: [:show, :edit, :update, :destroy]
+
   
   def index
     @operations = Operation.all

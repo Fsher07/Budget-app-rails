@@ -4,7 +4,6 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.includes(:user).all
     @operations = Operation.includes(:category).where(user_id: current_user.id)
-    @total = 1
   end
 
   def new

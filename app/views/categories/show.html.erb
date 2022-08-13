@@ -9,4 +9,6 @@
 </div>
  <%= render 'operations/index', locals: { operations: @operations } %>
 
-<%= button_to 'New Payment', new_operation_path, method: :get, class: "fixed-bottom btn btn-success rounded-0" %>
+<div class="new-payment fixed-bottom">
+  <%= link_to 'New Payment', new_operation_path, method: :get, class: "new-button color-white text-center text-decoration-none" %>
+</div>
