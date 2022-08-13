@@ -7,6 +7,8 @@
 
   <%if defined?(title) %>
    <h2 class="text-white mb-0"><%= title %></h2>
+  <%elsif request.path.delete('\/').empty? %>
+    <h2 style="font-size: 24px;" class="text-white mb-0">CATEGORIES</h2>
   <%else%>
     <h2 style="font-size: 24px;" class="text-white mb-0"><%= request.path.delete('\/').upcase %></h2>
   <%end%>

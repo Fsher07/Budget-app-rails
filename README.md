@@ -11,9 +11,9 @@ The **MPay** app is going to be helpful to track your expenses and transactions.
 
 ## Live Demo and Presentation
 
-[Visit this link](https://budget-app-ror.herokuapp.com/) to interact with the web app
+[Visit this link](https://mpay-application.herokuapp.com/) to interact with the web app
 
-[Short video presentation](https://www.loom.com/share/2c0b7493c08d489fb50c9ed9e9a24c3e)
+[Short video presentation](https://www.youtube.com/watch?v=w5C7C9Lh9NI)
 
 # Getting Started
 

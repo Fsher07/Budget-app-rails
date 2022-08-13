@@ -7,7 +7,7 @@ class OperationsController < ApplicationController
 
   def new
     @operation = Operation.new
-    @categories = Category.all.map { |c| [c.name, c.id] }
+    @categories = Category.where(user_id: current_user.id).all.map { |c| [c.name, c.id] }
   end
 
   def create
