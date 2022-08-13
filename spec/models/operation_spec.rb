@@ -4,7 +4,9 @@ RSpec.describe Operation, type: :model do
   describe 'Test the Operation model' do
     subject do
       @user = User.new(email: 'example@mail.com', password: '1234567')
-      @category = Category.new(name: 'test', icon:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png", user_id: @user.id)
+      @category = Category.new(name: 'test',
+                               icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png',
+                               user_id: @user.id)
       @operation = Operation.new(name: 'burgers', amount: 25, user_id: @user.id, category_id: @category.id)
     end
 

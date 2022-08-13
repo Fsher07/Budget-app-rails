@@ -14,8 +14,8 @@
  *= require_self
  */
 
- /*-- Font Family*/
- @font-face {
+/* -- Font Family */
+@font-face {
   font-family: 'Proxima Nova';
   src: url('Proxima_Nova_Font.otf');
 }
@@ -28,14 +28,15 @@
 * {
   font-family: 'Proxima Nova', sans-serif;
 }
-/*End of font familiy*/
 
- .main-nav {
+/* End of font familiy */
+
+.main-nav {
   padding: 2.2em 1em;
   background: linear-gradient(rgba(55, 150, 193) 1%, rgba(55, 120, 194) 100%);
- }
+}
 
- .nav-i {
+.nav-i {
   width: 30px;
 }
 
@@ -65,7 +66,10 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
   color: #434b54;
 }
@@ -205,7 +209,7 @@ p {
     text-align: center;
     opacity: 0.9;
   }
-  
+
   .mobile-menu a {
     font-size: 2em;
     font-weight: 600;
@@ -216,14 +220,14 @@ p {
     padding-bottom: 10px;
     margin: 0 20%;
   }
-  
+
   .show {
     display: grid;
     grid-template-columns: 1fr;
     position: fixed;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(60deg,rgba(55, 172, 193), rgba(55, 120, 194));
+    background: linear-gradient(60deg, rgba(55, 172, 193), rgba(55, 120, 194));
     top: 0;
     left: 0;
     right: 0;
@@ -231,12 +235,12 @@ p {
     animation: slideMe 0.2s ease-in;
     z-index: 1031;
   }
-  
+
   @keyframes slideMe {
     0% {
       transform: translateX(-100%);
     }
-  
+
     100% {
       transform: translateX(0%);
     }
@@ -249,21 +253,21 @@ p {
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.13, 0.24, 0.35, 1.64);
   }
-  
+
   .menu-bar .bar1,
   .menu-bar .bar2 {
     margin-bottom: 5px;
   }
-  
+
   .menu-bar.change .bar1 {
     transform: translate(0, 10px) rotate(45deg);
   }
-  
+
   .menu-bar.change .bar2 {
     transform: translateX(-55px);
     background-color: transparent;
   }
-  
+
   .menu-bar.change .bar3 {
     transform: translate(0, -10px) rotate(-45deg);
   }
@@ -289,7 +293,7 @@ p {
     align-items: center;
     gap: 2px;
   }
-  
+
   .operation-details button {
     background: none;
     border: none;
@@ -303,16 +307,16 @@ p {
 
   .new-button {
     display: block;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
-  border: 1px solid #fff;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 }

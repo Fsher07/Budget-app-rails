@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   load_and_authorize_resource
-  
+
   def index
     @categories = Category.includes(:user).all
     @operations = Operation.includes(:category).where(user_id: current_user.id)

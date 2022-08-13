@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :categories, dependent: :destroy
   has_many :operations, dependent: :destroy
 
-  validates :name, :email,  presence: true, length: { maximum: 255 }
-  validates :email, uniqueness: true 
+  validates :name, :email, presence: true, length: { maximum: 255 }
+  validates :email, uniqueness: true
 end

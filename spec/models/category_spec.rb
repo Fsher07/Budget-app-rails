@@ -4,7 +4,9 @@ RSpec.describe Category, type: :model do
   describe 'Validate Category model' do
     before(:example) do
       @user = User.new(email: 'example@mail.com', password: '1234567')
-      @category = Category.new(name: 'test', icon:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png", user_id: @user.id)
+      @category = Category.new(name: 'test',
+                               icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png',
+                               user_id: @user.id)
       @user.save
     end
 
