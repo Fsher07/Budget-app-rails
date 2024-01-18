@@ -1,62 +1,62 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# MPay
 
-# Project Name
-
-> Description the project.
-
+The **MPay** app is going to be helpful to track your expenses and transactions.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- Bootstrap CSS Framework
 
-## Live Demo (if available)
+## Live Demo and Presentation
 
-[Live Demo Link](https://livedemo.com)
+[Visit this link](https://mpay-application.herokuapp.com/) to interact with the web app
+
+[Short video presentation](https://www.youtube.com/watch?v=w5C7C9Lh9NI)
+
+# Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+- You can clone this repo by typing `git clone https://github.com/Fsher07/Budget-app-rails.git` on your terminal.
+
+- Type `cd budget-app` to access the project on the terminal.
+
+- Run `bundle install` to install all the required dependencies.
+
+- Run `rails s` to start a development server.
+
+# Testing
+
+`bundle exec rspec` will run all the tests.
+
+Also, you can run `bundle exec rspec spec/` to run specific tests.
+
+You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
+
+## Errors
+
+If you encounter any errors, run the following commands.
+
+- Run `rails db:drop db:create db:migrate` to drop, create and migrate a new database.
+
+- Run `rubocop && rubocop -A` to check for and fix code errors.
 
 
-## Getting Started
+## Author
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+👤 **Furkan Salim Hıdır**
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Fsher07](https://github.com/Fsher07)
+- Twitter: [@furkansalimhdr1](https://twitter.com/furkansalimhdr1)
+- LinkedIn: [Furkan Salim Hıdır](https://www.linkedin.com/in/fsalimhidir/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Fsher07/Budget-app-rails/issues).
 
 ## Show your support
 
@@ -64,12 +64,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+- Microverse for giving me this chance
+- The design template provider [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)(Sanpscan App).
